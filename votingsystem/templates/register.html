@@ -1,0 +1,274 @@
+<!doctype html>
+
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Voting System</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.html') }}">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon"> -->
+    <link rel="icon" type="image/png" href="static/assets/img/favicon.png">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome/fontawesome-all.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/linearicons.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/themify-icons.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/lightpick.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.mCustomScrollbar.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/tipso.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/select2.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    
+</head>
+<!-- Message =“some error”
+Return rendered_templates(register.html”, message=message)
+
+In html file: -->
+<script>
+   
+</script>
+
+</head>
+
+
+<body>
+    {%if value %}
+    <div class="alert alert-success">
+        <strong>{{ value }}</strong> 
+      </div>
+      {% endif %}
+    
+    <!-- Preloader Start -->
+    <div class="preloader-outer">
+        <div class="sl-preloader-holder">
+            <img src="{{ url_for('static', filename='images/loader.png') }}" alt="loader img">
+            <div class="sl-loader"></div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+    <!-- MAIN START -->
+    <main class="sl-main sl-register-main">
+        <div class="sl-registerfixed">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="sl-register-holder">
+                            <div class="sl-registerarea">
+                                <div class="sl-registersignarea">
+                                    <div class="sl-registersignarea__title">
+                                        <h3>Signup For Free</h3>
+                                    </div>
+                                    <ul class="nav sl-registertabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="sl-signupcustomer" data-toggle="tab" href="#signupcustomer" role="tab" aria-selected="true">
+                                                <span><i class="fa fa-check"></i></span>
+                                                <h4><em>Signup as</em> Admin
+                                                </h4>
+                                               <i class="ti-info-alt toltip-content" data-tipso="Admin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="sl-signupprovider" data-toggle="tab" href="#signupprovider" role="tab" aria-selected="false">
+                                                <span><i class="fa fa-check"></i></span>
+                                                <h4><em>SignIn as</em> Admin / Voter
+                                                </h4>
+                                                <i class="ti-info-alt toltip-content" data-tipso="Provider"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content sl-signup" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="signupcustomer" role="tabpanel" aria-labelledby="sl-signupcustomer">
+                                            <form class="sl-formtheme sl-signupform" action="/signup" method="post" autocomplete="off">
+
+                                                <fieldset>
+                                                    <div class="sl-signupform-wrap ">
+                                                        <div class="form-group  form-group-icon">
+                                                            <div class="sl-select">
+                                                                 <select name="type" id="type" required>
+                                                                     <option value=""  hidden="">Select Local as Pakistan/ International as US America*</option>
+                                                                     <option value="Local">Local</option>
+                                                                     <option value="International">International</option>
+                                                                     
+                                                                 </select>
+                                                             </div>
+                                                         </div>
+                                                        <div class="form-group form-group-half form-group-icon">
+                                                            <i class="ti-info-alt toltip-content" data-tipso="name"></i>
+                                                            <input type="text" name="uname" value="" class="form-control sl-form-control" placeholder="Nickname*" pattern="^[a-zA-z]+$" required>
+                                                        </div>
+                                                        <div class="form-group form-group-half">
+                                                            <input type="text" id="cnic" name="cnic" value="" class="form-control sl-form-control" onkeypress="return /[a-z]/i.test(event.key)" placeholder="CNIC: must follow the XXXXX-XXXXXXX-X format!" pattern="[0-9]{5}-[0-9]{7}-[0-9]"  title="XXXXX-XXXXXXX-X format!" required autocomplete="off">
+                                                        </div>
+                                                        <div class="form-group form-group-half">
+                                                            <input type="text" id="fname" name="fname" value="" onkeypress="return /[a-z]/i.test(event.key)" class="form-control sl-form-control" placeholder="First Name*"  required >
+                                                        </div>
+                                                        <div class="form-group form-group-half">
+                                                            <input type="text"  id="lname" name="lname" value="" onkeypress="return /[a-z]/i.test(event.key)" class="form-control sl-form-control" placeholder="Last Name*"  required>
+                                                        </div>
+                                                        
+                                                        <div class="form-group form-group-half">
+                                                            <input type="email" id="email" name="email" value="" class="form-control sl-form-control" placeholder="Enter Email" title="abc123@gmail.com" required autocomplete="false" >
+                                                        </div>
+                                                        
+                                                        <div class="form-group form-group-half">
+                                                           <div class="sl-select">
+                                                                <select name="gender" name="gender" required>
+                                                                    <option value=""  hidden="">Gender*</option>
+                                                                    <option value="Male">Male</option>
+                                                                    <option value="Female">Female</option>
+                                                                    <option value="Other">Other</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group form-group-half">
+                                                            <input type="tel" id="phone" name="phone" value="" class="form-control sl-form-control" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" maxlength="13"  placeholder="Phone*"  required>
+                                                        </div>
+                                                        <div class="form-group form-group-half">
+                                                            <input type="password" id="pass" name="pass" value="" class="form-control sl-form-control" placeholder="Password*"  required>
+                                                        </div>
+                                                        <div class="form-group form-group-half">
+                                                            <input type="password" id="cpass" name="cpass" value="" class="form-control sl-form-control" placeholder="Retype Password*"  required>
+                                                        </div>
+                                                        <div class="form-group sl-btnarea">
+                                                            <!-- <div class="sl-checkbox">
+                                                                <input  id="terms" type="checkbox" name="category">
+                                                                <label  for="terms">
+                                                                    <span>I agree to <a href="javascript:void(0);">Terms and Conditions</a></span>
+                                                                </label>
+                                                            </div> -->
+                                                            <!-- <div class="col-md-12 text-center"></div>' -->
+                                                            <input id="sinup" name="signup" type="submit" value="SignUp" class="btn sl-btn">
+                                                            
+                                                            <!-- <button id="submit" name="submit" type="submit" value="signup" class="btn sl-btn">Signup</button> -->
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane fade" id="signupprovider" role="tabpanel" aria-labelledby="sl-signupprovider">
+                                            <form class="sl-formtheme sl-signupform" action="/signin" method="POST">
+                                                <fieldset>
+                                                    <br><br>
+                                                    <div class="sl-signupform-wrap">
+                                                        <div class="form-group form-group-half  col-md-4x">
+                                                            <div class="sl-select">
+                                                                 <select name="Type" id="Type">
+                                                                     <option value=""  hidden="">Type</option>
+                                                                     <option value="LocalAdmin">Local Admin</option>
+                                                                     <option value="LocalVoter">Local Voter</option>
+                                                                     <option value="InternationalAdmin">International Admin</option>
+                                                                     <option value="InternationalVoter">International Voter</option>
+                                                                    
+                                                                 </select>
+                                                             </div>
+                                                         </div>
+                                                       
+                                                        <div class="form-group form-group-icon col-md-9">
+                                                            <i class="ti-info-alt toltip-content" data-tipso="cnic"></i>
+                                                            <input type="text" name="cnic" value="" class="form-control sl-form-control"  placeholder="CNIC: must follow the XXXXX-XXXXXXX-X format!" pattern="[0-9]{5}-[0-9]{7}-[0-9]" title="CNIC No must follow the XXXXX-XXXXXXX-X format!" required>
+                                                        </div>
+                                                        
+                                                        <div class="form-group form-group-half">
+                                                            <input type="password" name="password" value="" class="form-control sl-form-control" placeholder="Password*"  required>
+                                                        </div>
+                                                        
+                                                        <div class="form-group sl-btnarea">
+                                                            
+                                                            <input type="submit" class="btn sl-btn" id="signin" name="signin" value="SignIn">
+                                                            <!-- <button type="submit" class="btn sl-btn" name="submit" value="SignIn">SignIn</button> -->
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="sl-oroption">
+                                        <span>or</span>
+                                    </div>
+                                    <div class="sl-loginicon">
+                                        <ul>
+                                            <li><a href="javascript:void(0);" class="sl-facebookbox"><i class="fab fa-facebook-f"></i>Signup via facebook</a></li>
+                                            <li><a href="javascript:void(0);" class="sl-googlebox"><i class="fab fa-google"></i>Signup via google</a></li>
+                                        </ul>
+                                    </div> -->
+                                </div>
+                                <!-- <div class="sl-registerarea__terms">
+                                    <p>By signing up you agree to these <a href="javascript:void(0);">Terms &amp; Conditions</a> &amp; consent to <a href="javascript:void(0);"> Cookie Policy &amp; Privacy Policy.</a></p>
+                                </div> -->
+                                <div class="sl-registerarea__footer">
+                                    <p> Already a member? <a href="/register"> Sigin Now</a></p>
+                                </div>
+                            </div>
+                            <div class="sl-registercontent">
+                                <figure class="sl-registercontent__img">
+                                    <img src="{{ url_for('static', filename='images/register/images.jpg') }}" alt="img">
+                                    <figcaption>
+                                        <strong class="sl-registerlogo">
+                                            <a href="/index-2"><img src="{{ url_for('static', filename='images/register/logo123.png') }}" alt="Images Description"></a>
+                                        </strong>
+                                        <div class="sl-registertitle">
+                                            <h4>The ballot is stronger than the bullet.</h4>
+                                            <h2>We wish to record a voter's true will.</h2>
+                                        </div>
+                                        <div class="sl-descritpion">
+                                            <p>Instead of politicians, let the monkey govern the country. Atleast they will only steal the bananas.</p>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- MAIN END -->
+    <script src="{{ url_for('static', filename='js/vendor/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/jquery-library.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/appear.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/countTo.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/gmap3.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/select2.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/select2.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/readmore.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/jquery-ui.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/lightpick.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/tipso.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/countdown.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/backgroundstretch.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>$.backstretch("{{ url_for('static', filename='images/register/main-bg.jpg') }}");</script>
+</body>
+
+<!-- Mirrored from amentotech.com/htmls/servosell/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Jul 2020 18:10:14 GMT -->
+</html>
+
+<script>
+    // using this function by next button
+    function AjaxPost(formData) {
+            var ajaxConfig = {
+                type: "post",
+                url: "/prac'",
+                data: new FormData(formData),
+                success: function (result) {
+                    alert(result);
+                    window.location.href = "/prac"
+                }
+    
+            }
+            if ($(formData).attr('enctype') == "multipart/form-data")
+            {
+                ajaxConfig["contentType"] = false;
+                ajaxConfig["processData"] = false;
+    
+            }
+            $.ajax(ajaxConfig);
+            return false;
+        }
+</script>

@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+        <link rel="apple-touch-icon" sizes="76x76" href="static/assets/img/apple-icon.png">
+        <link rel="icon" type="image/png" href="static/assets/img/favicon.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Light Bootstrap Dashboard - Free Bootstrap 4 Admin Dashboard by Creative Tim</title>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+        <!--     Fonts and icons     -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+        <!-- CSS Files -->
+        <link href="static/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="static/assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
+        <!-- CSS Just for demo purpose, don't include it in your project -->
+        <link href="static/assets/css/demo.css" rel="stylesheet" />
+</head>
+
+<body>
+    {% if value %}
+    <div class="alert alert-success">
+        
+         <strong>{{ value }}</strong> 
+         
+      </div>
+      {% endif %}
+    <div class="wrapper">
+        <div class="sidebar" data-image="static/assets/img/sidebar-5.jpg" data-color="blue">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple |  | green | orange | red"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="" class="simple-text">
+                        Admin Panel
+                    </a>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item " >
+                        <a class="nav-link" href="./International_dashboard">
+                            <i class="nc-icon nc-chart-pie-35"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                   
+                    <li class="dropdown nav-item">
+                        <a href="#" class=" nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-layers-3"></i>
+                            <span class="notification">Party</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu" >
+
+                            <a class="dropdown-item" href="./Add_Presidential_Parties">Add Party</a>
+                            <a class="dropdown-item" href="./View_Presidential_Parties">View Party</a>
+                        </ul>
+                    </li>
+
+                    <!-- <li class="nav-item ">
+                        <a class="nav-link" href="./Add_Presidential_Parties">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>Add Party</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./View_Presidential_Parties">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>View Parties</p>
+                        </a>
+                    </li> -->
+                    <li class="dropdown nav-item">
+                        <a href="#" class=" nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-grid-45  "></i>
+                            <span class="notification">States</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item" href="./Add_State">Add States</a>
+                            <a class="dropdown-item" href="./View_States">View States</a>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item ">
+                        <a class="nav-link" href="./Add_State">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>Add States</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./View_States">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>View States</p>
+                        </a>
+                    </li> -->
+                    <li class="dropdown nav-item">
+                        <a href="#" class="nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <span class="notification">Candidates</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item" href="./Add_Presidential_Candidates">Add Candidates</a>
+                            <a class="dropdown-item" href="./View_Presidential_Candidates">View Candidates</a>
+                        </ul>
+                    </li>
+
+                    <!-- <li class="nav-item ">
+                        <a class="nav-link" href="./Add_Presidential_Candidates">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>Add Candidates</p>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./View_Presidential_Candidates">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>View Candidates</p>
+                        </a>
+                    </li> -->
+
+
+                    <li class="dropdown nav-item">
+                        <a href="#" class=" nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <span class="notification">Voters</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item" href="./Add_Presidential_voters">Add Voter</a>
+                            <a class="dropdown-item" href="./View_Presidential_Voters">View Voter</a>
+                        </ul>
+                    </li>
+
+                    <!-- <li class="nav-item ">
+                        <a class="nav-link" href="./Add_Presidential_voters">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>Add Voter</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./View_Presidential_Voters">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>View Voters</p>
+                        </a>
+                    </li> -->
+
+
+                    <li class="dropdown nav-item">
+                        <a href="#" class="nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-preferences-circle-rotate "></i>
+                            <span class="notification">Presidential Election</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item" href="./Add_Presindential_Elections">Add Presidential</a>
+                            <a class="dropdown-item" href="./Presindential_Election_List">Presindential List</a>
+                            <a class="dropdown-item" href="./Start_PR_Election">Start / Results</a>
+                        </ul>
+                    </li>
+                   
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg " color-on-scroll="500" >
+                <div class="container-fluid" data-color="blue">
+                    <a class="navbar-brand" href="#"> Dashboard </a>
+                    <!-- <br>
+                    <a class="navbar-brand" href="#"></a>
+                    <a class="navbar-brand text-danger">{{ value }} </a> -->
+                    
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        
+                        <ul class="navbar-nav ml-auto">
+                           
+                            <li class="nav-item">
+                                <a class="nav-link" href="./register">
+                                    <i class="nc-icon nc-circle-09">Logout</i>
+                                </a>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+         
+            <!-- End Navbar -->
+                        <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        
+                        <div class="col-md-2 pr-1">
+                            
+                        </div>
+                        
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title ">Edit Candidate</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form id="loginform" class="form-horizontal" role="form" method="POST" action="/Edit_Presidential_Candidates" enctype="multipart/form-data" autocomplete="off">
+                                        <div class="row">
+                                            <div class="col-md-5 pr-1">
+                                                <div class="form-group">
+                                                    <!-- <label>First Name</label> -->
+                                                    <input type="text" class="form-control" name="fname" style="text-transform: capitalize;" onkeypress="return /[a-z]/i.test(event.key)" value="{{edit_candidate['cand_fname']}}" placeholder="First Name" required autocomplete="off">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 px-1">
+                                                <div class="form-group">
+                                                   <!-- <label>Last Name</label> -->
+                                                    <input type="text" class="form-control" name="lname" style="text-transform: capitalize;" onkeypress="return /[a-z]/i.test(event.key)" value="{{edit_candidate['cand_lname']}}" placeholder="Last Name" required autocomplete="off">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 pr-1">
+                                                <div class="form-group">
+                                                    <!-- <label>CNIC</label> -->
+                                                    <input type="text" class="form-control" name="cnic" value="{{edit_candidate['cand_cnic']}}" placeholder="CNIC: must follow the XXXXX-XXXXXXX-X format!" pattern="[0-9]{5}-[0-9]{7}-[0-9]{1}" title="CNIC No must follow the XXXXX-XXXXXXX-X format!" required autocomplete="off">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 pl-1">
+                                                <div class="form-group">
+                                                    <!-- <label>Email</label> -->
+                                                    <input type="email" class="form-control" name="email" value="{{edit_candidate['cand_email']}}" placeholder="Email" required autocomplete="off">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-5 pr-1">
+                                                <div class="form-group">
+                                                  <!-- <label for="birthday">Birthday:</label> -->
+                                                  <input type="date" id="Dob" value="{{edit_candidate['cand_Dob']}}" name="Dob" max="2000-05-01" class="form-control" required>
+                                               </div>
+                                            </div>
+                                            <div class="col-md-4 px-1">
+                                                <div class="form-group">
+                                                  <!--  <label>Phone Number</label> -->
+                                                    <input type="tel" class="form-control" name="number" value="{{edit_candidate['cand_number']}}"  pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"  maxlength="13" placeholder="Phone Number: XXX-XXXX-XXXX format!" title="follow the XXX-XXXX-XXXX format!" required>
+                                                </div>
+                                            </div>                                          
+                                            
+                                        </div>                                          
+
+                                        <div class="col-md-5 pl-1">
+                                            <div class="form-group ">
+                                                <!-- <label for="city">Choose City</label> -->
+                                                <select name="cand_party" id="cand_party" class="form-control" required>
+                                                    <option value="{{edit_candidate['cand_party']}}">{{edit_candidate['cand_party']}}</option>
+                                                    province  {%for r in party%}
+                                                    <option value="{{r['Party_name']}}" >{{ r['Party_name'] }}</option>
+                                                      {%endfor%}
+                                                    
+                                                    
+                                                  </select>
+                                            </div>
+                                            
+                                        </div>   
+                                        <div class="col-md-6 pl-1">
+                                            <div class="form-group ">
+                                               
+                                                <select name="cand_constituency" id="cand_constituency" class="form-control" required>
+                                                    <option value="{{edit_candidate['cand_constituency']}}" >{{edit_candidate['cand_constituency']}}</option>
+                                                    <option value="Provincial">Provincial Constituency</option>
+                                                    <option value="National" >National Constituency</option>
+                                                                                                       
+                                                  </select>
+                                            </div>
+                                            
+                                        </div>                           
+                                            
+                                        
+                                       
+                                       
+                                        </div>
+
+                                    
+                                        
+                                        <button type="submit" class="btn btn-primary btn-fill pull-right" name="cand_id" value="{{edit_candidate['_id']}}">Update Candidate</button>
+                                        <div class="clearfix"></div>
+                                        
+                                   
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+    </div>
+           
+        </div>
+    </div>
+    
+</body>
+<!--   Core JS Files   -->
+<script src="static/assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="static/assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="static/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="static/assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!--  Chartist Plugin  -->
+<script src="static/assets/js/plugins/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="static/assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+<script src="static/assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="static/assets/js/demo.js"></script>
+
+</html>

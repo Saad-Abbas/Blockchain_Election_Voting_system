@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="apple-touch-icon" sizes="76x76" href="static/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="static/assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Voting System</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="static/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="static/assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="static/assets/css/demo.css" rel="stylesheet" />
+    <style>
+        .card-body {
+            /* opacity: 0.9; */
+            background-color: gainsboro;
+            
+          }
+        /* .navbar {
+            color: black;        
+            background-color:;
+          } */
+          </style>
+</head>
+
+<body>
+     {% if value %}
+    <div class="alert alert-success">
+        
+         <strong>{{ value }}</strong> 
+         
+      </div>
+      {% endif %}
+    <div class="wrapper">
+        <div class="sidebar" data-image="static/assets/img/sidebar-5.jpg" data-color="blue">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple |  | green | orange | red"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="" class="simple-text">
+                        Admin Panel
+                    </a>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item " >
+                        <a class="nav-link" href="./International_dashboard">
+                            <i class="nc-icon nc-chart-pie-35"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                   
+                    <li class="dropdown nav-item">
+                        <a href="#" class=" nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-layers-3"></i>
+                            <span class="notification">Party</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu" >
+
+                            <a class="dropdown-item" href="./Add_Presidential_Parties">Add Party</a>
+                            <a class="dropdown-item" href="./View_Presidential_Parties">View Party</a>
+                        </ul>
+                    </li>
+
+                    <!-- <li class="nav-item ">
+                        <a class="nav-link" href="./Add_Presidential_Parties">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>Add Party</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./View_Presidential_Parties">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>View Parties</p>
+                        </a>
+                    </li> -->
+                    <li class="dropdown nav-item">
+                        <a href="#" class=" nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-grid-45  "></i>
+                            <span class="notification">States</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item" href="./Add_State">Add States</a>
+                            <a class="dropdown-item" href="./View_States">View States</a>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item ">
+                        <a class="nav-link" href="./Add_State">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>Add States</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./View_States">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>View States</p>
+                        </a>
+                    </li> -->
+                    <li class="dropdown nav-item">
+                        <a href="#" class="nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <span class="notification">Candidates</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item" href="./Add_Presidential_Candidates">Add Candidates</a>
+                            <a class="dropdown-item" href="./View_Presidential_Candidates">View Candidates</a>
+                        </ul>
+                    </li>
+
+                    <!-- <li class="nav-item ">
+                        <a class="nav-link" href="./Add_Presidential_Candidates">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>Add Candidates</p>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./View_Presidential_Candidates">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>View Candidates</p>
+                        </a>
+                    </li> -->
+
+
+                    <li class="dropdown nav-item">
+                        <a href="#" class=" nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <span class="notification">Voters</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item" href="./Add_Presidential_voters">Add Voter</a>
+                            <a class="dropdown-item" href="./View_Presidential_Voters">View Voter</a>
+                        </ul>
+                    </li>
+
+                    <!-- <li class="nav-item ">
+                        <a class="nav-link" href="./Add_Presidential_voters">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>Add Voter</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./View_Presidential_Voters">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>View Voters</p>
+                        </a>
+                    </li> -->
+
+
+                    <li class="dropdown nav-item">
+                        <a href="#" class="nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-preferences-circle-rotate "></i>
+                            <span class="notification">Presidential Election</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item" href="./Add_Presindential_Elections">Add Presidential</a>
+                            <a class="dropdown-item" href="./Presindential_Election_List">Presindential List</a>
+                            <a class="dropdown-item" href="./Start_PR_Election">Start / Results</a>
+                        </ul>
+                    </li>
+                   
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg " color-on-scroll="500" >
+                <div class="container-fluid" data-color="blue">
+                    <a class="navbar-brand" href="#"> Dashboard </a>
+                    <!-- <br>
+                    <a class="navbar-brand" href="#"></a>
+                    <a class="navbar-brand text-danger">{{ value }} </a> -->
+                    
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        
+                        <ul class="navbar-nav ml-auto">
+                           
+                            <li class="nav-item">
+                                <a class="nav-link" href="./register">
+                                    <i class="nc-icon nc-circle-09">Logout</i>
+                                </a>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+         
+           
+            <!-- End Navbar -->
+        <div class="content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group mb-3 has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Search Party Name" aria-label="Search username" aria-describedby="basic-addon2">
+                  </div>
+                </div>
+
+            </div>
+
+       
+                        <div class="col-md-12">
+                            <div class="card card-plain table-plain-bg">
+                                <div class="card-header ">
+                                    <h4 class="card-title text-uppercase text-center">PARTY RECORD</h4>
+                                    
+                                </div>
+                                <form role="form" method="POST" action="/Search_Presidential_Party"  enctype="multipart/form-data" autocomplete="off">
+                                <div class="card-body table-full-width table-responsive">
+                                    <table id="myTable" class="table table-hover">
+                                        <thead>
+                                            <th>ID</th>
+                                            <th>Party Name</th>
+                                            <th>Party Logo</th>
+                                          
+                                           
+                                        </thead>
+                                        
+                                        <tbody>
+                                            {% for k in results %}
+                                            <tr>
+                                                <td> {{k['_id'] }} </td>
+                                                <td> {{k['Party_name'] }} </td>
+                                                <td> {{k['Party_Image'] }} </td>
+                                               
+                                                <td><button type="submit" class="btn btn-warning btn-fill" name="Party_id" value="{{k['_id'] }}">Edit</button>
+                                                </form>
+                                                    <form method="POST" action="/Delete_Presidential_Party" enctype="multipart/form-data" autocomplete="off">
+                                                        <button type="submit" class="btn btn-danger btn-fill " name="Party_id" value="{{k['_id'] }}">Delete</button>
+                                           
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                            
+                                    {% endfor %}
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                           
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+<script src="static/assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="static/assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="static/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="static/assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!--  Chartist Plugin  -->
+<script src="static/assets/js/plugins/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="static/assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+<script src="static/assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="static/assets/js/demo.js"></script>
+
+<script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    </script>
+
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="static/assets/img/apple-icon.png">
+    <link rel="icon" type="image/ico" href="static/assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Light Bootstrap Dashboard - Free Bootstrap 4 Admin Dashboard by Creative Tim</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+        name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="static/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="static/assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="static/assets/css/demo.css" rel="stylesheet" />
+</head>
+
+<body>
+    {% if value %}
+    <div class="alert alert-success">
+
+        <strong>{{ value }}</strong>
+
+    </div>
+    {% endif %}
+    <div class="wrapper">
+        <div class="sidebar" data-image="static/assets/img/sidebar-5.jpg" data-color="blue">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple |  | green | orange | red"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="" class="simple-text">
+                        Admin Panel
+                    </a>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./dashboard">
+                            <i class="nc-icon nc-chart-pie-35"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="dropdown nav-item">
+                        <a href="#" class=" nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-chart"></i>
+                            <span class="notification">City</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item" href="./Add_City">Add City</a>
+                            <a class="dropdown-item" href="./View_Cities">View City</a>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown nav-item">
+                        <a href="#" class=" nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-compass-05"></i>
+                            <span class="notification">Party</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item" href="./Add_Parties">Add Party</a>
+                            <a class="dropdown-item" href="./View_Parties">View Party</a>
+                        </ul>
+                    </li>
+                    <li class="dropdown nav-item">
+                        <a href="#" class=" nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-chart-bar-32"></i>
+                            <span class="notification">Area</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item " href="./Add_Area">Add Area</a>
+                            <a class="dropdown-item" href="./View_Area">View Area</a>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown nav-item">
+                        <a href="#" class=" nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-grid-45"></i>
+                            <span class="notification">Province</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item" href="./Add_Province">Add Province</a>
+                            <a class="dropdown-item" href="./View_Province">View Province</a>
+                        </ul>
+                    </li>
+                    <li class="dropdown nav-item">
+                        <a href="#" class=" nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <span class="notification">Candidates</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item" href="./Add_Candidates">Add Candidates</a>
+                            <a class="dropdown-item" href="./View_Candidates">View Candidates</a>
+                        </ul>
+                    </li>
+                    <li class="dropdown nav-item">
+                        <a href="#" class=" nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <span class="notification">Voter</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item" href="./Add_voters">Add Voter</a>
+                            <a class="dropdown-item" href="./View_Voters">View Voter</a>
+                        </ul>
+                    </li>
+                    <li class="dropdown nav-item">
+                        <a href="#" class=" nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-layers-3"></i>
+                            <span class="notification">National Election</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item" href="./Add_National_Elections">Create NA-Election</a>
+                            <a class="dropdown-item" href="./National_Election_List">National Election-Seats</a>
+                            <a class="dropdown-item" href="./Start_NA_Election">Start/Result NA-Election</a>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown nav-item">
+                        <a href="#" class=" nav-link" data-toggle="dropdown">
+                            <i class="nc-icon nc-layers-3"></i>
+                            <span class="notification">Provincial Election</span>
+
+
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <a class="dropdown-item" href="./Add_Provincial_Elections">Create PA-Election</a>
+                            <a class="dropdown-item" href="./Provincial_Election_List">Provincial Election-Seats</a>
+                            <a class="dropdown-item" href="./Start_PA_Election">Start/Result PA-Election</a>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+                <div class="container-fluid" data-color="blue">
+                    <a class="navbar-brand" href="#"> Dashboard </a>
+                    <!-- <br>
+                    <a class="navbar-brand" href="#"></a>
+                    <a class="navbar-brand text-danger">{{ value }} </a> -->
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+
+                        <ul class="navbar-nav ml-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./register">
+                                    <i class="nc-icon nc-circle-09">Logout</i>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <!-- style="background-image: url('static/images/bc.jpg');background-repeat:no-repeat;" -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4 pr-1">
+
+                        </div>
+
+                        <div class="col-md-4">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title text-center">Add New Area</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form class="form-horizontal" role="form" method="POST" action="/Add_Area"
+                                        enctype="multipart/form-data" autocomplete="off">
+                                        <div class="col-md-8 pl-1">
+                                            <div class="form-group ">
+                                                <!-- <label for="city">Choose City</label> -->
+                                                <select name="Province" id="Province" class="form-control" required>
+                                                    <option value="" disabled selected>Choose Province...</option>
+                                                     {%for r in Province%}
+                                                    <option value="{{r['Province_Name']}}">{{ r['Province_Name'] }}</option>
+                                                    {%endfor%}
+
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-8 pl-1">
+                                            <div class="form-group ">
+                                                <!-- <label for="city">Choose City</label> -->
+                                                <select name="city" id="city" class="form-control">
+                                                    <option value="" disabled selected>Choose City...</option>
+                                                    province {%for r in city%}
+                                                    <option value="{{r['City_Name']}}">{{ r['City_Name'] }}</option>
+                                                    {%endfor%}
+
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-md-8 pr-1">
+                                                <div class="form-group">
+                                                    <!-- <label>Area Name</label> -->
+                                                    <input type="text" class="form-control" name="area"
+                                                        style="text-transform: capitalize;" placeholder="Area Name"
+                                                        onkeypress="return /[a-z]/i.test(event.key)" required
+                                                        autocomplete="off">
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                </div>
+
+                                <input type="submit" class="btn btn-primary btn-fill" id="addarea" name="addarea"
+                                    value="Add Area">
+                                <!-- <button type="submit" class="btn btn-success btn-fill pull-right" value="AddArea">Add Area</button> -->
+                                <div class="clearfix"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+    $(function () {
+
+        // Generic logic
+        var toggleDropdown = function (country) {
+            // hasOwner is a boolean store
+            var hascountry = typeof country !== typeof undefined && country;
+
+            // Use boolean to decide whether to disable/enable co-owner field
+            $('#city').prop('disabled', !hascountry).val('');
+               }
+
+        // Trigger logic when #owner is updated
+        $('#Province').on('change', function () {
+            toggleDropdown($(this).val());
+        });
+
+        // Trigger logic on DOM ready
+        toggleDropdown();
+    });</script>
+<script src="static/assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="static/assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="static/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="static/assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!--  Chartist Plugin  -->
+<script src="static/assets/js/plugins/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="static/assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+<script src="static/assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="static/assets/js/demo.js"></script>
+
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="static/assets/img/apple-icon.png">
+        <link rel="icon" type="image/png" href="static/assets/img/favicon.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Voting System</title>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+        <!--     Fonts and icons     -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+        <!-- CSS Files -->
+        <link href="static/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="static/assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
+        <!-- CSS Just for demo purpose, don't include it in your project -->
+        <link href="static/assets/css/demo.css" rel="stylesheet" />
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        <div class="sidebar" data-image="static/assets/img/sidebar-5.jpg" data-color="blue">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple |  | green | orange | red"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="" class="simple-text">
+                        Admin Panel
+                    </a>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item " >
+                        <a class="nav-link" href="./dashboard">
+                            <i class="nc-icon nc-chart-pie-35"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./Add_City">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>Add City</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./View_Cities">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>View Cities</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./Add_Parties">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>Add Party</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./View_Parties">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>View Parties</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./Add_Area">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>Add Area</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./View_Area">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>View Area</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./Add_Province">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>Add Province</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./View_Province">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>View Province</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./Add_Candidates">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>Add Candidates</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./View_Candidates">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>View Candidates</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./Add_voters">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>Add Voter</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./View_Voters">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>View Voters</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./Add_National_Elections">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>National Election</p>
+                        </a>
+                    </li>
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="./National_Election_List">
+                            <i class="nc-icon nc-notes"></i>
+                            <p>N_Election List</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./Start_NA_Election">
+                            <i class="nc-icon nc-tap-01"></i>
+                            <p>Start_NA_Election</p>
+                        </a>
+                    </li>
+                    <!-- <li class="dropdown nav-item">
+                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                    <i class="nc-icon nc-simple-add"></i>
+                                    <span class="notification">National Election</span>
+                                    <span class="d-lg-none">Notification</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Pakistan</a>
+                                    <a class="dropdown-item" href="#">China</a>
+                                    <a class="dropdown-item" href="#">Iran</a>
+                                </ul>
+                            </li> -->
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./Add_Provincial_Elections">
+                            <i class="nc-icon nc-simple-add"></i>
+                            <p>Provincial Election</p>
+                        </a>
+                    </li>
+                   
+                    <li>
+                        <a class="nav-link" href="./Provincial_Election_List">
+                            <i class="nc-icon nc-notes"></i>
+                            <p>P_Election List</p>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a class="nav-link" href="./Start_PA_Election">
+                            <i class="nc-icon nc-tap-01"></i>
+                            <p>Start_PA_Election</p>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a class="nav-link" href="./Status">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>Status</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./icons">
+                            <i class="nc-icon nc-atom"></i>
+                            <p>Icons</p>
+                        </a>
+                    </li>
+                     -->
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg " color-on-scroll="500" >
+                <div class="container-fluid" data-color="blue">
+                    <a class="navbar-brand" href="#"> Dashboard </a>
+                    <!-- <br>
+                    <a class="navbar-brand" href="#"></a>
+                    <a class="navbar-brand text-danger">{{ value }} </a> -->
+                    
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        
+                        <ul class="navbar-nav ml-auto">
+                           
+                            <li class="nav-item">
+                                <a class="nav-link" href="./register">
+                                    <i class="nc-icon nc-circle-09">Logout</i>
+                                </a>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+         
+            <!-- End Navbar -->
+
+            <from>
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 pr-1">
+                            
+                        </div>
+                        <div class="col-md-5 px-1">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Fill National Election Seats</h4>
+                                </div>
+                                <div class="card-body">
+                                    <!-- <form method="POST" action="/Fill_NA" enctype="multipart/form-data" autocomplete="off"> -->
+                                       
+                                       
+                                            
+                                        </div>
+                                        <!-- placeholder="NA-" pattern="[A-Z]{2}-[0-9]{}" title="must follow NA-1xx format!" -->
+                                               
+                                                
+                                              
+                                                    
+                                                </div>
+                                                <form class="sl-formtheme sl-signupform" id="myform" enctype="multipart/form-data" onsubmit="AjaxPost(this)" method="post">
+                                                      <p id="result">United State</p>
+                                                
+                                                <div class="row">
+                                                 {%for i in range(1,length) %}
+                                                    <div class="col-md-6 pr-1">
+                                                        <div class="form-group">
+                                                            <select id="country" name="country">
+                                                                <option value="None">-- Select --</option>
+                                                                <option value="zoraiz">PTI</option>
+                                                                <option value="saad" selected>PPP</option>
+                                                                <option value="ebaad">Malaysia</option>
+                                                            </select>            
+                                                        </div>
+                                                    </div>
+                                                    {%endfor%}
+                                                    <!-- <div class="col-md-6 pr-1">
+                                                        <div class="form-group">
+                                                            <select id="country2">
+                                                                <option value="None">-- Select --</option>
+                                                                <option value="ID001">China</option>
+                                                                <option value="ID002" selected>United State</option>
+                                                                <option value="ID003">Malaysia</option>
+                                                            </select>            
+                                                        </div>
+                                                    </div> -->
+                                                  
+                                                    <input id="sinup" name="signup" type="text" value="jkhafhasj" class="btn sl-btn">
+                                      
+                                              
+                                                    <br/>
+                                                    <br/>
+                                                    <!-- <button type="button" >Get Selected Value</button> -->
+                                            
+                                                    <button type="submit" value="submit">SUBMIT</button>
+                                                    <!-- <input id="sinup" name="signup" type="submit" value="SignUp" class="btn sl-btn"> -->
+                                      
+
+                                                    
+
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </from>
+           
+        </div>
+    </div>
+    <!--   -->
+    
+</div>
+
+</body>
+<!-- data = request.get_json() -->
+
+<script>
+    var fruits = []; 
+   
+    function GetSelectedValue(){
+        var e =null ;
+        var ed =null ;
+        e = document.getElementById("country");
+
+        ed = document.getElementById("country2");
+        var result = e.options[e.selectedIndex].value;
+        var result = ed.options[ed.selectedIndex].value;
+        fruits.push(result);
+        
+        document.getElementById("result").innerHTML = fruits;
+    }
+
+    function GetSelectedText(){
+        var e = document.getElementById("country");
+        var result = e.options[e.selectedIndex].text;
+        
+        document.getElementById("result").innerHTML = result;
+    }
+    
+</script>
+
+<script>
+    // using this function by next button
+    function AjaxPost(formData) {
+            var ajaxConfig = {
+                type: "post",
+                url: "/prac'",
+                data: new FormData(formData),
+                success: function (result) {
+                    alert(result);
+                    alert(data)
+                    window.location.href = "/prac"
+                }
+    
+            }
+            if ($(formData).attr('enctype') == "multipart/form-data")
+            {
+                ajaxConfig["contentType"] = false;
+                ajaxConfig["processData"] = false;
+    
+            }
+            $.ajax(ajaxConfig);
+            return false;
+        }
+</script>
+
+<script src="static/assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="static/assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="static/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="static/assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!--  Chartist Plugin  -->
+<script src="static/assets/js/plugins/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="static/assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+<script src="static/assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="static/assets/js/demo.js"></script>
+</html>
+<script>
+var myform = document.getElementById("myform");
+    var fd = new FormData(myform );
+    $.ajax({
+        url: "example.php",
+        data: fd,
+        cache: false,
+        processData: false,
+        contentType: false,
+        type: 'POST',
+        success: function (dataofconfirm) {
+            // do something with the result
+        }
+    });
+
+</script>
